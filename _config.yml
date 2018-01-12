@@ -28,7 +28,6 @@ repository: hannotify/hannotify.github.io
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 

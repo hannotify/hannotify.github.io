@@ -1,59 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-	{% if site.google_analytics and jekyll.environment == 'production' %}
-	{% include analytics.html %}
-	{% endif %}	
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}	
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.css" crossorigin="anonymous">
   </head>
   <body>
-
-      <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-          <div class="downloads">
-            <ul>
-              <li><a href="/" class="button"><strong>Bio &amp; Events</strong></a></li>
-              <li><a href="/talks" class="button"><strong>Talks</strong></a></li>
-            </ul>
-          </div>
-
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul>
-        </ul>
-      </nav>
-      <section>
-        {{ content }}
-
-      </section>
-      <footer>
-        <p>
-          Blog: <a href="//blogs.infosupport.com/author/h-embregts/">Info Support</a><br/>
-          Twitter: <a href="//twitter.com/hannotify">@hannotify</a>
-        </p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-        <p><small>All content &mdash; Copyright &copy; {{ 'now' | date: "%Y" }} Hanno Embregts</small></p>
-      </footer>
+    {% include navbar.html %}
+    {{ content }}
+    <div class="container">
+        {% include footer.html %}
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
 </html>

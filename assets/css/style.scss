@@ -1,12 +1,6 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
-@media print, screen and (max-width: 480px) {
-    #banner {
-        display: block;
-        position: relative;
-        top: 0px;
-    }
-}
+.jumbotron {
+    background-image: url("../../images/hanno-at-devoxx-cropped.jpg");
+    background-size: cover;}
